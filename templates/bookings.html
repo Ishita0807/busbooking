@@ -1,0 +1,45 @@
+from django import template
+from django.utils.safestring import mark_safe
+
+register = template.Library()
+
+@register.simple_tag
+def bookings():
+    return mark_safe('<a href="/bookings/">Bookings</a>')
+
+@register.simple_tag
+def signup():
+    return mark_safe('<a href="/signup/">Sign Up</a>')
+
+@register.simple_tag
+def login():
+    return mark_safe('<a href="/login/">Login</a>')
+
+@register.simple_tag
+def logout():
+    return mark_safe('<a href="/logout/">Logout</a>')
+
+@register.simple_tag
+def profile():
+    return mark_safe('<a href="/profile/">Profile</a>')
+
+@register.simple_tag
+
+def change_password():
+    return mark_safe('<a href="/change-password/">Change Password</a>')
+
+@register.simple_tag
+def reset_password():
+    return mark_safe('<a href="/reset-password/">Reset Password</a>')
+
+@register.simple_tag
+def delete_account():
+    return mark_safe('<a href="/delete-account/">Delete Account</a>')
+
+@register.simple_tag
+
+def update_profile():
+    return mark_safe('<a href="/update-profile/">Update Profile</a>')
+
+
+@register.simple_tag
